@@ -1,0 +1,62 @@
+/****** Other resources ******/
+.game-return {
+  cursor: pointer;
+  background-color: #26a69a;
+  color: #212121;
+}
+.game-return:hover {
+  background-color: #4db6ac;
+}
+.star-size {
+  font-size: 1.25em;
+}
+.star-teal {
+  color: #26a69a;
+}
+.star-grey {
+  color: #455A64;
+}
+table {
+  font-size: 1.5em;
+}
+th, td {
+  padding: 0.5em;
+}
+.button-container {
+  margin-bottom: 1em;
+}
+#gameDetails {
+  margin-bottom: 2em;
+}
+#gameDesc {
+  word-break: normal;
+  hyphens: auto;
+  text-align: justify;
+}
+.navButton {
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: #607D8B;
+}
+
+.navButton.active {
+  background-color: #37474f;
+}
+
+.navbar-brand.active:hover {
+  cursor: pointer;
+}
+
+@media all and(max-width: 500px) {
+  .table--collapse {
+    display: block;
+  }
+  .table--collapse .table-cell {
+    width: 100% !important;
+  }
+  .table--collapse .table-cell--foot {
+    margin-bottom: 1em;
+  }
+}

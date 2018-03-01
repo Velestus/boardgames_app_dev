@@ -1,0 +1,38 @@
+<main>
+  <div class="jumbotron">
+    <h1 class="display-4">Moje us&shy;praw&shy;nie&shy;nia</h1>
+    <p class="lead">Galeria mojej twórczości, w niektórych grach jest tego sporo!</p>
+  </div>
+  <section class="single-card">
+    <div class="card card-inverse content carouselContainer">
+      <div id="carouselWorkshop" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+        <ol class="carousel-indicators carousel-indicators--round">
+          <li data-target="#carouselWorkshop" *ngFor="let url of game[0].urlWorkshop; let i = index" [attr.data-slide-to]="i" [class.active]="i == 0" class="d-none d-lg-block"></li>
+        </ol>
+        <div class="carousel-inner landscape-ratio" role="listbox">
+          <figure class="carousel-item" *ngFor="let src of game[0].urlWorkshop; let i = index" [class.active]="i == 0">
+            <img class="d-block img-fluid" src="{{src}}" alt="{{game[0].title}} - usprawnienie">
+            <figcaption class="carousel-caption d-none d-lg-block" id="imgHeader_{{i}}">
+              <h4 class="imgHeading mb-4">{{game[0].title}} - usprawnienie {{i+1}} z {{game[0].urlWorkshop.length}}</h4>
+            </figcaption>
+            <figcaption class="carousel-caption d-block d-lg-none text-center">
+              <h6 class="imgHeading" style="width: 30%;"><strong>{{i+1}} z {{game[0].urlWorkshop.length}}</strong></h6>
+            </figcaption>
+          </figure>
+        </div>
+        <a class="carousel-control-prev carouselContainer" href="#carouselWorkshop" role="button" data-slide="prev">
+          <i class="fa fa-chevron-left carouselButton"></i>
+        </a>
+        <a class="carousel-control-next carouselContainer" href="#carouselWorkshop" role="button" data-slide="next">
+          <i class="fa fa-chevron-right carouselButton"></i>
+        </a>
+        
+      </div>
+    </div>
+    
+    <div class="row" id="btnGroup">
+      <button type="button" class="btn game-return col-sm-12 col-md-12 col-lg-4 col-xl-4" routerLink="/games/{{game[0].id}}" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>&#x21AA; {{game[0].title}}</strong></button>
+      <button type="button" class="btn game-return col-sm-12 col-md-12 col-lg-4 col-xl-4 offset-lg-4 offset-xl-4" routerLink="/games" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>Moje gry &#x21A9;</strong></button>
+    </div>
+  </section>
+</main>

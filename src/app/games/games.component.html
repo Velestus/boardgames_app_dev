@@ -1,0 +1,27 @@
+<main>
+  <div class="jumbotron">
+    <h1 class="display-4">Moje gry</h1>
+    <p class="lead">
+      W tym dziale znajdziesz wszystkie posiadane przeze mnie gry. Dodatkowo przy niektórych tytułach można obejrzeć moje dokonania odnośnie usprawniania gier planszowych. Wycięte wkłady, pomalowane figurki i&nbsp;inne.
+    </p>
+  </div>
+  <section class="card-deck">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let game of games">
+      <div class="card mb-4 card-flex">
+        <h4 class="card-header card-light-grey">{{game.title}}</h4>
+        <article class="card-block card-block-flex card-inverse card-grey">
+          <figure class="mb-1">
+            <img class="card-img-top img-fluid" src="{{game.urlGame[0]}}" alt="{{game.title}}" id="gameImg_{{game.id}}">
+            <h6 class="card-subtitle">{{game.descriptionShort}}</h6>
+            <br/>
+            <p class="card-text">Czas gry: {{game.duration}}</p>
+          </figure>
+        </article>
+        <div class="card-footer card-footer-flex card-dark-grey">
+          <button type="button" class="btn game-details col-sm-12 col-md-12 col-lg-6 col-xl-6" 
+                  routerLink="/games/{{game.id}}" routerLinkActive="active" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>Szczegóły</strong></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

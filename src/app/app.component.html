@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-toggleable-sm navbar-inverse" id="myNavbar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div data-toggle="collapse" data-target=".navbar-collapse.show">
+    <a class="navbar-brand nav-link" routerLink="/main" routerLinkActive="active" id="navMain">Regalik Velestusa</a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav nav-pills">
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" id="navAbout">
+        <a class="nav-link navButton" routerLink="/about" routerLinkActive="active">O mnie</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" id="navGames">
+        <a class="nav-link navButton" routerLink="/games" routerLinkActive="active">Moje gry</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" id="navMeetings">
+        <a class="nav-link navButton" routerLink="/meetings" routerLinkActive="active">Spotkania</a>
+      </li>
+      <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" id="navContact">
+        <a class="nav-link navButton" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 offset-xs-1 offset-sm-1 offset-md-1 offset-lg-1 hyphenate" id="mainContainer" (window:scroll)="onScroll($event)" lang="pl">
+  <router-outlet></router-outlet>
+  <div data-toggle="collapse" data-target=".navbar-collapse.show">
+    <button type="button" class="btn back-to-top card-teal" (click)="goToTop()" id="topButton"><span class= "fa fa-chevron-up"></span></button>
+  </div>
+</div>
+<footer>
+  <p>
+    Wszystkie informacje i materiały zawarte na tej witrynie są moją własnością. Nie udzielam zgody na ich rozprzestrzenianie bez mojej wiedzy.
+    Chcesz skorzystać z czegoś? Napisz do mnie!
+  </p>
+</footer>
+

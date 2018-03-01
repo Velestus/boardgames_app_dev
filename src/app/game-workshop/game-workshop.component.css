@@ -1,0 +1,18 @@
+.game-return {
+  cursor: pointer;
+  background-color: #26a69a;
+  color: #212121;
+  margin-bottom: 0.25em;
+  margin-top: 0.75em;
+}
+.game-return:hover {
+  background-color: #4db6ac;
+}
+.imgHeading {
+  background-color: #26a69a;
+  color: #212121;
+}
+#btnGroup {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}

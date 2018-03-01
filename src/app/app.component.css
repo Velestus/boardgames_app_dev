@@ -1,0 +1,55 @@
+#navbarNav {
+  padding-top: 0.25em;
+}
+
+#myNavbar {
+  margin-bottom: 1em;
+  background-color: #455A64;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+.navbar-toggler:hover {
+  cursor: pointer;
+}
+
+.navButton {
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: #607D8B;
+}
+
+.navButton.active {
+  background-color: #37474f;
+}
+
+.navbar-brand.active:hover {
+  cursor: pointer;
+}
+
+footer {
+  padding: 1em;
+  background-color: #455A64;
+  font-size: 0.75em;
+  margin-top: 1em;
+  hyphens: none;
+}
+
+#mainContainer {
+  background-color: #37474f;
+  border-radius: 0.75em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  display: none;
+  opacity: 0.5;
+}

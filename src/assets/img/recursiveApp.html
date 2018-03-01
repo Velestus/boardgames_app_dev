@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recursive App</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+
+
+            <div ng-app="recursiveApp" ng-controller="recursiveAppController">
+
+                    <script type="text/ng-template" id="template" >
+                        <select ng-model="selectedItem" ng-change="selectedObect(selectedItem)" ng-init="nkData = data[data.length -1];">
+                            <option ng-repeat="item in nkData" value="{{item}}">{{item.label}}</option>
+                        </select>
+                         
+                            
+                     </script>
+
+                <div ng-repeat="x in data" ng-include="'template'">
+                     
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>    
+</body>
+
+
+
+
+
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+
+<script>
+        
+
+        var data = [
+            {label: "BMW", value: 0, child: null},
+            {label: "Audi", value: 1, child: null},
+            {label: "Honda", value: 2, child: [
+                {label: "Civic", value: "2a", child: [
+                    {label: "2.2 C-TDI", value: "2aa", child:[
+                        {label: "100 KM", value: "2aaa", child: null},
+                        {label: "120 KM", value: "2bbb", child: null},
+                        {label: "140 KM", value: "2bcc", child: null}
+            ]},
+                    {label: "1.8 V-TEC", value: "2bb", child: null},
+                    {label: "1.4 V-TEC", value: "2bc", child: null}
+            ]},
+                {label: "CR-V", value: "2b", child: null}
+            ]},
+            {label: "Suzuki", value: 3, child: null},
+            {label: "Opel", value: 4, child: [
+                {label: "Astra", value: "4a", child: null},
+                {label: "Insignia", value: "4b", child: null}
+            ]}
+        ]
+
+        
+
+        var app = angular.module('recursiveApp', []);
+        app.controller('recursiveAppController', function($scope) {
+            
+            $scope.data = [data];
+            $scope.isChild = null;
+            $scope.names = data.map((item)=>{
+                
+                return item.label
+            });
+            $scope.selectedObect = function (value) {
+                let valueObject = JSON.parse(value);
+                $scope.isChild = JSON.parse(value);
+                console.log();
+                
+                if(valueObject.child !== null){
+                    $scope.data.push(valueObject.child);
+                
+                    console.log($scope.data);
+                    
+                }
+                else{
+                    $scope.isChild = false; 
+                }
+                
+            }
+        });
+
+        
+</script>
+</html>

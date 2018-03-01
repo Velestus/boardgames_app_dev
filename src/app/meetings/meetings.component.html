@@ -1,0 +1,24 @@
+<main>
+  <div class="jumbotron">
+    <h1 class="display-4">Historia spotkań</h1>
+    <p class="lead">
+      W tym dziale znajdziesz informacje dotyczące spotkań planszowych, w&nbsp;których uczestniczyłem. Relacja z&nbsp;przebiegu rozgrywki, data i&nbsp;inne. Kliknij, aby uzyskać więcej szczegółów.
+    </p>
+  </div>
+  <section class="card-deck">
+    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4" *ngFor="let meeting of meetings">
+      <article class="card mb-4 card-flex">
+        <h4 class="card-header card-light-grey">{{meeting.place}}</h4>
+        <div class="card-block card-block-flex card-inverse card-grey">
+          <figure class="mb-1">
+            <img class="card-img-top img-fluid" src="{{meeting.url}}" alt="{{meeting.place}}, {{meeting.date}}">
+            <h6 class="card-subtitle">Rozegrane gry: {{meeting.games}}</h6>
+          </figure>
+        </div>
+        <div class="card-footer card-footer-flex card-light-grey">
+          <small>{{meeting.remarks}}</small>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>

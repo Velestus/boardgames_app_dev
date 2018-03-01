@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #607d8b;
+  text-align: center;
+  color: #ffffff;
+  -ms-word-break: normal;
+  word-break: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow: auto;
+}
+.jumbotron {
+  background-color: #546e7a;
+}
+.content {
+  text-align: left;
+  background-color: #455A64;
+}
+.outline {
+  border-color: #26a69a;
+}
+.card-dark-grey {
+  background-color: #455A64;
+}
+.card-light-grey {
+  background-color: #78909c;
+}
+.card-grey {
+  background-color: #546e7a;
+}
+.card-teal {
+  background-color: #26a69a;
+  color: #212121;
+}
+.card-img-top {
+  padding-bottom: 2em;
+}
+.card-flex {
+  border-color: #455A64;
+}
+.landscape-ratio {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.caorusel-indicators {
+  background-color: #CFD8DC;
+  padding: 1em;
+  font-size: 1em;
+}
+.carousel-indicators--round li {
+  border-radius: 1em;
+  margin: 0.2em 0.5em;
+  height: 1em;
+  max-width: 1em;
+  border: 0.2em solid #CFD8DC;
+  background-color: transparent;
+  opacity: 0.75;
+}
+.carousel-indicators > li {
+  background-color: #455A64;
+}
+.carousel-indicators > li:hover {
+  background-color: #607D8B;
+  opacity: 1;
+}
+.carousel-indicators > li.active {
+  background-color: #e0e0e0;
+  border-color: #455A64;
+}
+.carouselButton {
+  border: 0.2em solid #CFD8DC;
+  background-color: transparent;
+  font-size: 1em;
+  color: #CFD8DC;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  opacity: none;
+}
+.carouselContainer:hover .carouselButton {
+  color: #ffffff;
+}
+.carouselButton.active {
+  color: #ffffff;
+}
+.lead {
+  hyphens: none;
+  margin-top: 2em;
+  margin-bottom: 0;
+}

@@ -1,0 +1,68 @@
+<main>
+  <div class="jumbotron">
+    <h1 class="display-4">{{game[0].title}}</h1>
+    <p class="lead" [innerHTML]="game[0].descriptionLong" id="gameDesc"></p>
+  </div>
+  <section class="single-card" id="gameDetails">
+    <div class="text-right button-container">
+      <button type="button" class="btn game-return col-sm-12 col-md-12 col-lg-4 col-xl-4" *ngIf="game[0].urlWorkshop?.length > 0" routerLink="/games/{{game[0].id}}/workshop" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>Usprawnienia &#x21AA;</strong></button>
+    </div>
+    <div class="card card-inverse content carouselContainer">
+      <div id="carouselSlideOnly" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+        <ol class="carousel-indicators carousel-indicators--round">
+          <li data-target="#carouselSlideOnly" *ngFor="let url of game[0].urlGame; let i = index" [attr.data-slide-to]="i" [class.active]="i == 0"></li>
+        </ol>
+        <div class="carousel-inner landscape-ratio" role="listbox">
+          <figure class="carousel-item" *ngFor="let src of game[0].urlGame; let i = index" [class.active]="i == 0">
+            <img class="d-block img-fluid" src="{{src}}" alt="{{game[0].title}} {{i}} z {{game[0].urlGame.length}}">
+          </figure>
+        </div>
+        <a class="carousel-control-prev carouselContainer" href="#carouselSlideOnly" role="button" data-slide="prev">
+        <i class="fa fa-chevron-left carouselButton"></i>
+      </a>
+        <a class="carousel-control-next carouselContainer" href="#carouselSlideOnly" role="button" data-slide="next">
+        <i class="fa fa-chevron-right carouselButton"></i>
+      </a>
+      </div>
+    </div>
+  </section>
+  <table class="table table-responsive text-left">
+    <thead>
+      <tr>
+        <th class="col-8">Kategoria</th>
+        <th>Ocena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [hidden]="!game[0].starsVisual" class="star-size">Oprawa graficzna:</td>
+        <td [hidden]="!game[0].starsVisual" class="star-size">
+          <div class="d-none d-md-block">
+            <span [innerHTML]="'&#10026;'.repeat(game[0].starsVisual)" class="star-teal"></span><span [innerHTML]="'&#10026;'.repeat(10 - game[0].starsVisual)" class="star-grey"></span>
+          </div>
+          <p>{{game[0].starsVisual}}/10</p>
+        </td>
+      </tr>
+      <tr>
+        <td [hidden]="!game[0].starsGameplay" class="star-size">Rozgrywka:</td>
+        <td [hidden]="!game[0].starsGameplay" class="star-size">
+          <div class="d-none d-md-block">
+            <span [innerHTML]="'&#10026;'.repeat(game[0].starsGameplay)" class="star-teal"></span><span [innerHTML]="'&#10026;'.repeat(10 - game[0].starsGameplay)" class="star-grey"></span>
+          </div>
+          <p>{{game[0].starsGameplay}}/10</p>
+        </td>
+      </tr>
+      <tr>
+        <td [hidden]="!game[0].starsOverall" class="star-size">Ocena ogólna:</td>
+        <td [hidden]="!game[0].starsOverall" class="star-size">
+          <div class="d-none d-md-block">
+            <span [innerHTML]="'&#10026;'.repeat(game[0].starsOverall)" class="star-teal"></span><span [innerHTML]="'&#10026;'.repeat(10 - game[0].starsOverall)" class="star-grey"></span>
+          </div>
+          <p>{{game[0].starsOverall}}/10</p>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+  <button type="button" class="btn game-return col-sm-12 col-md-12 col-lg-4 col-xl-4 offset-lg-8 offset-xl-8" routerLink="/games" data-toggle="collapse" data-target=".navbar-collapse.show"><strong>Powrót do gier &#x21A9;</strong></button>
+</main>
