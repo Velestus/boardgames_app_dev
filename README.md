@@ -1,28 +1,34 @@
-# AngularBoardGames
+# Board Games Collection
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+Website containing information regarding mine board game collection. _Here are stored my development files._
 
-## Development server
+## This project can be accessed [here] to view.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Routing here uses hashes, to allow single page navigation on mine hosting (so it won't send any requests to the server regarding non-existing paths).
 
-## Code scaffolding
+This project is functionally completed. I wasn't able to make good pictures of every single board game to put them here, but it will be added eventually. It doesn't influence application's workflow.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Site is written in Polish, as this is my native language. I am planning to create files with translations and load them regarding to locale (with English as default).
 
-## Build
+To-do list:
+- [x] Add every owned board game into database.
+- [x] Use json to hold all data regarding board games.
+- [x] Consistent styling of the website.
+- [x] Tested display on different devices and web browsers.
+- [x] RWD.
+- [x] Add my upgrades to board games.
+- [x] Add routing.
+- [x] Place website on hosting server.
+- [x] Troubleshooting after migration to hosting server.
+- [ ] Add some events into database.
+- [ ] Different languages.
+- [ ] All photos added.
+- [ ] Lazy loading of images.
+- [ ] Performance upgrades.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Whole website is written with usage of Angular 5 as JS framework and Bootstrap for CSS.
 
-## Running unit tests
+Enjoy browsing!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-"# planszowo" 
+<!-- My Referrences -->
+[here]: http://projects.bborawski.pl/angular-board-games
